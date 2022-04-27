@@ -533,7 +533,7 @@ body {
 
 
 .product-link {
-    
+    /* position: relative; */
     display: block;
     text-decoration: none;
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);   
@@ -542,8 +542,11 @@ body {
 .product-link:hover,
 .product-link:focus {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    outline: none;
+    transform: translateY(0);
+    opacity: 1;
 }
+
+
 /* Кнопки портфоліо */
 
 
@@ -828,30 +831,47 @@ body {
 }
 
 .overlay {
+    position: relative;
+    
+}
+
+/* .overlay-title:hover {
+    transform: translateY(0);
+    opacity: 1;
+} */
+
+.overlay-title {
     position: absolute;
-    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
     top: 0;
-    /* width: 322px;
-    height: 168px; */
-    /* background: rgba(47, 48, 58, 0.8); */
-    /* margin: 63px 24px; */
-    /* transform: translateY(100%); */
-    transform: translate(-50%, -50%);
-    color: red;
+    left: 0;
+    color: var(--adress-hero-color);
+    background-color: rgba(33, 150, 243, 0.9);
+    padding: 63px 24px;
     font-size: 18px;
     line-height: 1.56;
     letter-spacing: 0.03em;
+    text-align: left;
+    transform: translateY(294px);
+    transition: transform 2s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 0;
+}
+    
+    /* width: 100%;
+    height: 100%; */
+    /* transform: translateY(294px); */
+    /* margin: 63px 24px;
     
 }
 
-/* .overlay-text {
-    
+
+
+/* .overlay:hover {
+    transform: translateY(0);
 } */
 
-.overlay:hover {
-    transform: translateY(0);
-}
-
-.thumb {
+/* .thumb {
     position: relative;
-}
+} */

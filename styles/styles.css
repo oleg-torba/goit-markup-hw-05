@@ -137,14 +137,12 @@ body {
 .menu-link:hover,
 .menu-link:focus {
     color: var(--hover-color);
-    outline: none;
 }
 
 
 /* Поточна сторінка */
 .current {
     color: var(--hover-color);
-    /* outline: none;} */
 }
 
 .current::after {
@@ -197,7 +195,6 @@ body {
 .contact-link:focus {
     color: var(--hover-color);
     fill: var(--hover-color);
-    outline: none;
 }
 
 /* HERO */
@@ -249,7 +246,6 @@ body {
 .hero .button:hover,
 .hero .button:focus {
     background-color: var(--button-hover-bgc);
-    outline: none;
     
 }
 
@@ -361,6 +357,7 @@ body {
     width: 370px;
     margin-right: 30px;
     margin-bottom: 30px;
+    
 
 }
 
@@ -452,7 +449,6 @@ body {
 .adress-contacts:hover,
 .adress-contacts:focus {
     color: var(--hover-color);
-    /* outline: none; */
 }
 
 
@@ -474,7 +470,7 @@ body {
 
 .adress-link:hover {
     color: var(--hover-color);
-    outline: none;
+
 }
 
 /* Список  */
@@ -533,21 +529,31 @@ body {
 
 
 .product-link {
-    /* position: relative; */
     display: block;
     text-decoration: none;
-    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);   
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
 }
 
-.product-link:hover,
-.product-link:focus {
+.product-link:hover {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    transform: translateY(0);
-    opacity: 1;
+
 }
 
+/* Виліт тексту при ховері */
+.product-link:focus{
+    /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
+    transform: translateY(0);
+    /* transition: transform 2s cubic-bezier(0.4, 0, 0.2, 1); */
+}
 
-/* Кнопки портфоліо */
+.product-link:hover .overlay-title {
+    transform: translateY(0);
+}
+
+.product-link:focus .overlay-title {
+    transform: translateY(0);
+}
 
 
 .but {
@@ -587,7 +593,6 @@ body {
     background-color: var(--hover-color);
     color: var(--adress-hero-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    outline: none;
 } 
 /* списки картинок */
 
@@ -597,6 +602,7 @@ body {
     display: block;
     max-width: 100%;
     height: auto;
+    
 }
 
 /* Приховування заголовку */
@@ -654,7 +660,6 @@ body {
     border: color var(--hover-color);
     background-color: var(--hover-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    outline: none;
 }
 
 .client-item {
@@ -691,7 +696,6 @@ body {
 .client:focus {
     fill: var(--hover-color);
     border-color: var(--hover-color);
-    outline: none;
     
 }
 
@@ -770,7 +774,6 @@ body {
 .icon-link:focus {
     background-color: var(--hover-color);
     border-color: var(--hover-color);
-    outline: none;
 }
 
 .footer-icon-list {
@@ -832,13 +835,11 @@ body {
 
 .overlay {
     position: relative;
+    overflow: hidden;
     
 }
 
-/* .overlay-title:hover {
-    transform: translateY(0);
-    opacity: 1;
-} */
+
 
 .overlay-title {
     position: absolute;
@@ -855,23 +856,9 @@ body {
     letter-spacing: 0.03em;
     text-align: left;
     transform: translateY(294px);
-    transition: transform 2s cubic-bezier(0.4, 0, 0.2, 1);
-    opacity: 0;
-}
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     
-    /* width: 100%;
-    height: 100%; */
-    /* transform: translateY(294px); */
-    /* margin: 63px 24px;
     
 }
-
-
-
-/* .overlay:hover {
-    transform: translateY(0);
-} */
-
-/* .thumb {
-    position: relative;
-} */
+    
+  
